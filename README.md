@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Victoryruro/frontend-mentor-2)
-- Live Site URL: [Add live site URL here](https://victoryruro.github.io/frontend-mentor-2/)
+- Solution URL: [(https://github.com/Victoryruro/frontend-mentor-2)]
+- Live Site URL: [(https://victoryruro.github.io/frontend-mentor-2/)]
 
 ## My process
 Started with HTML to get the skeleton of the page , then process to styling with CSS . I styled the desktop design first then the mobile design.
