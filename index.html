@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Lexend+Deca&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Sunflower:wght@500&display=swap" rel="stylesheet">
+
   
   <title>Frontend Mentor | Product preview card component</title>
 
@@ -12,25 +16,293 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family:monregular ;
+      src: url("./static/Montserrat-Regular.ttf");
+    }
+    @font-face {
+      font-family:monbold ;
+      src: url("./static/Montserrat-ExtraBold.ttf");
+    }
+    main{
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      background-color:hsl(30, 38%, 92%) ;
+      margin: 3px;
+    }
+    body{
+      margin: auto 0px;
+      height: 100vh;
+    }
+    section{
+      display: flex;
+      flex-wrap: wrap;
+      width: 785px;
+      margin: 0px;
+      padding: 0px;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 16px;
+
+
+
+    }
+    .img{
+      flex-basis: 50%;
+      display: flex;
+    }
+    .img .firstimg{
+      max-width: 97%;
+      flex-basis: 100%;
+      border-radius: 16px;
+      border-top-right-radius:0px ;
+      border-bottom-right-radius: 0px;
+      
+    }
+    .img .secondimg{
+      display: none;
+    }
+
+    .main-text{
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      /* padding: 17px; */
+      align-items: center;
+    }
+    .down{
+      flex-basis: 90%;
+      padding: 10px;
+      max-width: 95%;
+      padding-right: 22px;
+
+    }
+    .d1{
+      font-size: 14px;
+      padding-bottom: 20px;
+      padding-top: 28px;
+      margin: 0px;
+      font-family: monregular;
+      font-weight: 500;
+      letter-spacing: 8px;
+
+      
+
+     
+
+    }
+    .d2{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 700;
+      margin: 0px;
+      padding-bottom: 20px;
+      max-width: 75%;
+      font-size: 40px;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+
+
+    }
+    .d3{
+      font-size: 21px;
+      margin: 0px;
+      max-width: 95%;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-family:monregular ;
+      font-weight: 500;
+
+    }
+    .cash{
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+    
+    }
+    #amt{
+      color:hsl(158, 36%, 37%) ;
+      margin: 0px;
+      font-weight: 800;
+      margin-right: 20px;
+      font-size: 51px;
+      padding-top: 18px;
+      padding-bottom: 20px;
+    }
+    #strikeamt{
+      padding-top: 0px;
+    }
+    .button{
+      width: auto;
+      display: flex;
+      justify-content:flex-start;
+    }
+    .button button{
+      padding: 15px 17px;
+      background-color: hsl(158, 36%, 37%);
+      flex-basis: 90%;
+      border-radius: 10px;
+      color:hsl(0, 0%, 100%) ;
+      border-color: hsl(158, 36%, 37%);
+      font-size: 14px;
+      font-family: monbold;
+    }
+    .button button:hover{
+      background-color: hsl(158, 80%, 16%);
+
+    }
+    button img{
+      padding-right: 7px;
+    }
+    @media only screen and (max-width:650px) {
+      .img .firstimg{
+        display: none;
+      }
+      .img .secondimg{
+        display: unset;
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+      .img{
+        flex-basis: 100%;
+        justify-content: center;
+        height: 50vh;
+      }
+      section{
+        flex-direction: column;
+      
+        /* margin-top: 233px; */
+        width: 95%;
+        margin-bottom:20px ;
+      }
+      .down{
+        flex-basis: 90%;
+        padding: 20px;
+        max-width: 95%;
+        padding-top: 12px;
+        padding-right: 22px;
+
+      }
+      .d1{
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 8px;
+        margin: 0px;
+      
+
+      }
+      .d2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+        margin: 0px;
+        padding-bottom: 10px;
+        max-width: 75%;
+        font-size: 26px;
+
+
+      }
+      .d3{
+        font-size: 17px;
+        margin: 0px;
+        max-width: 95%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+      }
+      .cash{
+        display: flex;
+        flex-direction:row;
+        align-items:flex-start;
+      
+      }
+      #amt{
+        color:hsl(158, 36%, 37%) ;
+        margin: 0px;
+        font-weight: 800;
+        margin-right: 20px;
+        font-size: 51px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+      }
+      .button{
+        width: auto;
+        display: flex;
+        justify-content:flex-start;
+      }
+      .button button{
+        padding: 15px 17px;
+        background-color: hsl(158, 36%, 37%);
+        flex-basis: 95%;
+        border-radius: 10px;
+        color:hsl(0, 0%, 100%) ;
+        border-color: hsl(158, 36%, 37%);
+        font-size: 14px;
+      }
+      button img{
+        padding-right: 7px;
+        
+      }
+      .attribution{
+        font-size: 14px;
+      }
+      main{
+        height: unset;
+        padding-top: 30px;
+      }
+      /* *{
+        outline: 1px solid;
+      } */
+      #strikeamt{
+        padding-top: 5px;
+      }
+    }
+
+
   </style>
 </head>
 <body>
+  <main>
+    <section>
+      <div class="img">
+        <img src="./images/image-product-desktop.jpg" alt="flower" class="firstimg">
+        <img src="./images/image-product-mobile.jpg" alt="flower" class="secondimg">
+      </div>
+      <div class="main-text">
+        <div class="down">
+          <p class="d1"> PERFUME</p>
+          <p class="d2">Gabrielle Essence Eau De Parfum</p>
+          <p class="d3"> 
+            A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="cash">
+            <p id="amt"> $149.99</p>
+            <p id="strikeamt"><strike>$169.99</strike></p>
+          </div>
+          <div class="button">
+            <button><img src="./images/icon-cart.svg" alt="Cart">  Add to Cart</button>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+  </main>
 
-  Preview
+ 
 
-  Gabrielle Essence Eau De Parfum
+  
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+ 
 
-  $149.99
-  $169.99
+ 
+  
 
-  Add to Cart
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Victoryruro">Victory Diemuodeke</a>.
   </div>
 </body>
 </html>
